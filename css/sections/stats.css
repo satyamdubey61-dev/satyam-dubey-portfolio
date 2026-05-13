@@ -1,0 +1,61 @@
+.section-stats {
+    padding: 3rem 5%;
+    position: relative;
+    z-index: 10;
+    margin-top: -5rem; /* pull up into hero slightly */
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.stat-box {
+    background: rgba(15, 15, 25, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 243, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 243, 255, 0.15);
+}
+
+.stat-number {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .section-stats {
+        margin-top: 0;
+    }
+}

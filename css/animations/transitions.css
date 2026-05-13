@@ -1,0 +1,26 @@
+/* Transition Utilities */
+.transition-smooth {
+    transition: var(--transition-smooth);
+}
+
+.transition-fast {
+    transition: var(--transition-fast);
+}
+
+/* Interactive elements default transitions */
+a, button, input, textarea, select, .btn, .glass-panel, .gallery-card, .certificate-card, .video-card {
+    transition: var(--transition-smooth);
+}
+
+/* Additional Animation Delays */
+.delay-5 { animation-delay: 1.0s; }
+.delay-6 { animation-delay: 1.2s; }
+.delay-7 { animation-delay: 1.4s; }
+.delay-8 { animation-delay: 1.6s; }
+
+/* Global Hover Effects for Cards */
+.glass-panel:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 243, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.15);
+}

@@ -1,0 +1,94 @@
+.section-about {
+    min-height: 100vh;
+    padding: 8rem 5% 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+/* Badge */
+.neon-badge {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-cyan-neon);
+    background: rgba(0, 243, 255, 0.1);
+    border: 1px solid rgba(0, 243, 255, 0.3);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+}
+
+.about-content {
+    z-index: 2;
+}
+
+.about-text {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-text strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.feature-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.tag {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: rgba(188, 19, 254, 0.05);
+    border: 1px solid rgba(188, 19, 254, 0.2);
+    border-radius: 8px;
+    transition: var(--transition-fast);
+}
+
+.tag:hover {
+    background: rgba(188, 19, 254, 0.15);
+    border-color: rgba(188, 19, 254, 0.5);
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.2);
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+/* Right Side Cards Grid */
+.about-visuals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    z-index: 2;
+}
+
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+@media (max-width: 576px) {
+    .about-visuals {
+        grid-template-columns: 1fr;
+    }
+}

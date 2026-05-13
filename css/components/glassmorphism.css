@@ -1,0 +1,73 @@
+.glass-panel {
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Navbar specific glass */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: var(--transition-smooth);
+    background: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.brand-logo {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.brand-logo span {
+    color: var(--color-cyan-neon);
+    text-shadow: 0 0 10px var(--color-cyan-neon);
+}
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: var(--transition-fast);
+    position: relative;
+    padding-bottom: 5px;
+}
+.nav-links a:hover {
+    color: var(--color-cyan-neon);
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+}
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-cyan-neon);
+    transition: var(--transition-fast);
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* simple hidden for mobile initially, can add hamburger later */
+    }
+}

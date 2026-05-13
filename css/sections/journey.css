@@ -1,0 +1,180 @@
+.section-journey {
+    min-height: 100vh;
+    padding: 6rem 5%;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--color-cyan-neon), var(--color-purple-neon));
+    transform: translateX(-50%);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    z-index: 0;
+}
+
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+.timeline-item:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.timeline-content {
+    width: calc(50% - 50px);
+    position: relative;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: var(--color-bg-deep);
+    border: 2px solid var(--color-cyan-neon);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-cyan-neon);
+    box-shadow: var(--neon-shadow-cyan);
+    z-index: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+    border-color: var(--color-purple-neon);
+    color: var(--color-purple-neon);
+    box-shadow: var(--neon-shadow-purple);
+}
+
+.timeline-card {
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    width: 50px;
+    height: 2px;
+    background: var(--color-cyan-neon);
+    box-shadow: 0 0 10px rgba(0,243,255,0.5);
+}
+
+.timeline-item:nth-child(odd) .timeline-card::before {
+    right: -50px;
+}
+
+.timeline-item:nth-child(even) .timeline-card::before {
+    left: -50px;
+    background: var(--color-purple-neon);
+    box-shadow: 0 0 10px rgba(188,19,254,0.5);
+}
+
+.timeline-item:nth-child(even) .timeline-card {
+    border-color: rgba(188, 19, 254, 0.3);
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+}
+.timeline-item:nth-child(odd) .timeline-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(0, 243, 255, 0.2);
+    border-color: rgba(0, 243, 255, 0.5);
+}
+.timeline-item:nth-child(even) .timeline-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(188, 19, 254, 0.2);
+    border-color: rgba(188, 19, 254, 0.5);
+}
+
+.timeline-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.timeline-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+    .timeline::before {
+        left: 40px;
+    }
+    .timeline-item:nth-child(odd), .timeline-item:nth-child(even) {
+        justify-content: flex-end;
+    }
+    .timeline-content {
+        width: calc(100% - 90px);
+    }
+    .timeline-icon {
+        left: 40px;
+    }
+    .timeline-item:nth-child(odd) .timeline-card::before,
+    .timeline-item:nth-child(even) .timeline-card::before {
+        left: -50px;
+        right: auto;
+        width: 50px;
+    }
+}
+@media (max-width: 576px) {
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline-icon {
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .timeline-content {
+        width: calc(100% - 60px);
+    }
+    .timeline-item:nth-child(odd) .timeline-card::before,
+    .timeline-item:nth-child(even) .timeline-card::before {
+        left: -20px;
+        width: 20px;
+    }
+    .timeline-card {
+        padding: 1.5rem;
+    }
+}

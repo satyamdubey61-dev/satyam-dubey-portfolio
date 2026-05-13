@@ -1,0 +1,24 @@
+/* Core Theme Variables */
+:root {
+  /* Futuristic Neon Color Palette */
+  --color-bg-deep: #0a0a0f;
+  --color-bg-glass: rgba(15, 15, 25, 0.6);
+  --color-cyan-neon: #00f3ff;
+  --color-purple-neon: #bc13fe;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-cyan-neon), var(--color-purple-neon));
+  
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
+  
+  /* Borders & Shadows */
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --neon-shadow-cyan: 0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3);
+  --neon-shadow-purple: 0 0 10px rgba(188, 19, 254, 0.5), 0 0 20px rgba(188, 19, 254, 0.3);
+  
+  /* Animation Timing */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
