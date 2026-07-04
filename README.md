@@ -75,38 +75,5 @@ SatyamDubey-Portfolio/
     ├── images/           # Achievement and gallery imagery
     ├── certificates/     # Award and expo certification files
     └── videos/           # Pitch recordings and project demonstration files
-🚀 How to Run Locally
-Since this is a lightweight, pure front-end web application, you can run it without any package installations:
 
-Option 1: Direct Execution
-Simply open index.html in any modern web browser (Chrome, Firefox, Safari, Edge).
-
-Option 2: Local Server (Recommended for modular structure & video loading)
-If you have Node.js or Python installed, run a local development server for the best performance and to avoid CORS issues with local video assets:
-
-Using Python:
-
-bash
-
-python -m http.server 8000
-Then visit http://localhost:8000.
-
-Using Node (Live Server / Vite / etc.):
-
-bash
-
-npx live-server
-or
-
-bash
-
-npm install -g serve
-serve .
-📬 Contact & Socials
-Developer: Satyam Dubey
-Location: Goa, India
-Email: 
-satyamdubey201202@gmail.com
-GitHub: satyamdubey61-dev
-LinkedIn: Satyam Dubey
 Let's build a more accessible future together! 🌟
