@@ -7,9 +7,23 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Satyam Dubey Portfolio initialized.");
     
-    initStatsCounters();
-    initVideoPreviews();
-    initMediaModals();
+    try {
+        initStatsCounters();
+    } catch (e) {
+        console.error("Error initializing stats counters:", e);
+    }
+
+    try {
+        initVideoPreviews();
+    } catch (e) {
+        console.error("Error initializing video previews:", e);
+    }
+
+    try {
+        initMediaModals();
+    } catch (e) {
+        console.error("Error initializing media modals:", e);
+    }
 });
 
 /**
@@ -42,7 +56,7 @@ function initStatsCounters() {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.1 });
 
     stats.forEach(stat => observer.observe(stat));
 }
