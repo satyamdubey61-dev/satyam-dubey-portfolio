@@ -122,6 +122,17 @@ function initMediaModals() {
         });
     });
 
+    // Hero Profile Image Click
+    const heroProfileImg = document.querySelector(".hero-profile-img");
+    if (heroProfileImg) {
+        heroProfileImg.addEventListener("click", () => {
+            modalImg.src = heroProfileImg.src;
+            modalImg.style.display = "block";
+            modalVideo.style.display = "none";
+            modal.classList.add("active");
+        });
+    }
+
     // Close Modal Events
     const close = () => {
         modal.classList.remove("active");

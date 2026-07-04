@@ -72,6 +72,6 @@
 }
 
 /* Modifiers for cursor */
-.gallery-card, .certificate-card, .video-card {
+.gallery-card, .certificate-card, .video-card, .hero-profile-img {
     cursor: pointer;
 }
